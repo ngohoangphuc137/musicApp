@@ -1,8 +1,22 @@
 {
-    "rewrites": [
-        {
-            "source": "/api/(.*)",
-            "destination": "http://nhphphuc.id.vn/api/$1"
+    "version": 2,
+    "builds": [
+      {
+        "src": "frontend/package.json",
+        "use": "@vercel/static-build",
+        "config": {
+          "distDir": "frontend/build"
         }
+      }
+    ],
+    "routes": [
+      {
+        "src": "/api/(.*)",
+        "dest": "http://nhphphuc.id.vn/api/$1"
+      },
+      {
+        "src": "/(.*)",
+        "dest": "/index.html"
+      }
     ]
-}
+  }
