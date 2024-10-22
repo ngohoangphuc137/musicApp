@@ -1,8 +1,8 @@
 import axios from "axios";
 //http://music.test/admin-music/api/
-//http://nhphphuc.id.vn/api/
+//https://nhphphuc.id.vn/api/
 const Instance = axios.create({
-    baseURL: 'http://nhphphuc.id.vn/api/',
+    baseURL: 'https://nhphphuc.id.vn/api/',
 });
 // Add a request interceptor
 axios.interceptors.request.use(function (config) {

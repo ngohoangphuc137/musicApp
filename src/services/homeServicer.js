@@ -4,7 +4,6 @@ export const getHome = () => new Promise(async (resolve, reject) => {
         const response = await Instance({
             url: 'page/get/home',
             method: 'get',
-            mode: 'no-cors'
         })
         resolve(response)
     } catch (error) {
